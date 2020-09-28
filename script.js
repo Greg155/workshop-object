@@ -4,17 +4,14 @@ let wilder = {
     age : 27,
     isLearningJs : true
 }
-console.log(wilder);
 
-console.log('name' in wilder);
-console.log('isLearningJs' in wilder);
-console.log('isLearningPhp' in wilder);
+Object.keys(wilder).includes("name") ? console.log("Name exist") : console.log("Name doesn't exist");
+Object.keys(wilder) .includes("isLearningJs") ? console.log("isLearningJs exist") : console.log("isLearningJs doesn't exist");
+Object.keys(wilder) .includes("isLearningPhp") ? console.log("isLearningPhp exist") : console.log("isLearningPhp doesn't exist");
 
-wilder.knowsHTML = true;
-wilder.knowsCSS = true;
-wilder.hobbies = ["unity","Blender"];
-
-delete wilder.name;
-wilder.firstName = "Greg";
+wilder.knowsHTML = true 
 wilder.lastName = "Akhun";
-console.log(wilder);
+
+for(let key in wilder){
+    console.log(key,wilder[key]);
+}
